@@ -2,9 +2,9 @@
   "name": "socket_server",
   "version": "1.0.0",
   "description": "",
-  "main": "server-1.js",
+  "main": "server.js",
   "scripts": {
-    "start": "node server-1.js"
+    "start": "node server.js"
   },
   "author": "",
   "license": "ISC",

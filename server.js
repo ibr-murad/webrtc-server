@@ -45,6 +45,10 @@ function arrayRemove(arr, value) {
 
 var allClients = [];
 
+server.listen(PORT, () => {
+    console.log('Server Started !!!')
+})
+
 io.on('connection', socket => {
     
     socket.on(ACTIONS.JOIN, ({roomID, userID, userName}) => {
@@ -174,14 +178,4 @@ io.on('connection', socket => {
     
 });
 
-const publicPath = path.join(__dirname, 'build');
-
-app.use(express.static(publicPath));
-
-app.get('*', (req, res) => {
-    res.sendFile(path.join(publicPath, 'index.html'));
-});
-
-server.listen(3000, () => {
-    console.log('Server Started!')
-})
+app.get('/', (req, res) => res.send('Hello World!!!'));
